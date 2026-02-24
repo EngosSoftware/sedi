@@ -1,0 +1,14 @@
+[package]
+name = "sedi"
+version = "0.0.1"
+authors = ["Dariusz Depta <depta@engos.de>"]
+description = "Inplace stream editor"
+documentation = "https://docs.rs/sedi"
+repository = "https://github.com/EngosSoftware/sedi.git"
+keywords = ["inplace", "stream", "editor"]
+license = "MIT OR Apache-2.0"
+edition = "2024"
+
+[dependencies]
+normalized-line-endings = "1.0.14"
+regex = "1.12.3"
