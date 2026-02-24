@@ -8,6 +8,14 @@ repository = "https://github.com/EngosSoftware/sedi.git"
 keywords = ["inplace", "stream", "editor"]
 license = "MIT OR Apache-2.0"
 edition = "2024"
+exclude = [
+    "rustfmt.toml",
+    "Taskfile.yml",
+    ".github/",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "manual/"
+]
 
 [dependencies]
 normalized-line-endings = "1.0.14"
