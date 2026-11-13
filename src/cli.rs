@@ -6,6 +6,7 @@ const DESCRIPTION: &str = env!("CARGO_PKG_DESCRIPTION");
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 pub enum CliAction {
+    RunTask(String),
     ShowHelp(Text),
     ShowVersion(Text),
     Replace(String, String, String),
@@ -15,6 +16,11 @@ pub enum CliAction {
 fn get_cli(app: String) -> Clar {
     Clar::new(app).description(DESCRIPTION).options_arguments(
         [
+            ClarOption::short("task", 't')
+                .long_label("task")
+                .help("Run edit task defined in file")
+                .standalone()
+                .takes_value("FILE"),
             ClarOption::short("version", 'V')
                 .long_label("version")
                 .standalone()
@@ -41,6 +47,11 @@ fn get_cli(app: String) -> Clar {
 pub fn get_action(app: String, args: Vec<String>) -> CliAction {
     match get_cli(app).resolve(args) {
         Ok(matches) => {
+            if matches.is_present("task")
+                && let Some(file) = matches.get_first_value("task")
+            {
+                return CliAction::RunTask(file);
+            }
             if matches.is_short("help") {
                 return CliAction::ShowHelp(matches.get_help());
             }

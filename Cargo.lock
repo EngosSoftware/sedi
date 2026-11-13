@@ -19,12 +19,18 @@ checksum = "687780ea2bbba1364204a233437806670f023d79becd25c40abdb2609c6a62ba"
 
 [[package]]
 name = "clars"
-version = "0.3.1"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d0b2a6ec4cabcb04ffb9f83a7ce83753aeee17b324feb49289764f86e7e0820a"
+checksum = "cfdacd7a9c94ba99983304b5b15f1738c203fcb7771602fdb0ee39497911daf4"
 dependencies = [
  "antex",
 ]
+
+[[package]]
+name = "diml"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cc7af09ac05ad2e11c054630b1eadb0820c94bb50c51125f4fe7efb5ed647f31"
 
 [[package]]
 name = "glob"
@@ -69,9 +75,10 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 
 [[package]]
 name = "sedi"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "clars",
+ "diml",
  "glob",
  "regex",
 ]

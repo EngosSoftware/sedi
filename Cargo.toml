@@ -1,6 +1,6 @@
 [package]
 name = "sedi"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Dariusz Depta <depta@engos.de>"]
 description = "Inplace stream editor"
 documentation = "https://docs.rs/sedi"
@@ -20,7 +20,8 @@ include = [
 ]
 
 [dependencies]
-clars = "0.3.1"
+clars = "0.3.2"
+diml = "0.2.0"
 glob = "0.3.4"
 regex = "1.13.1"
 
