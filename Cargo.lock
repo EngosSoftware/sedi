@@ -19,9 +19,9 @@ checksum = "687780ea2bbba1364204a233437806670f023d79becd25c40abdb2609c6a62ba"
 
 [[package]]
 name = "clars"
-version = "0.3.0"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5eacae1c61b793fe7e3aa0a9aafd2ba98700bb2a933bf4e88cbeed140ffd39ae"
+checksum = "d0b2a6ec4cabcb04ffb9f83a7ce83753aeee17b324feb49289764f86e7e0820a"
 dependencies = [
  "antex",
 ]
@@ -69,7 +69,7 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 
 [[package]]
 name = "sedi"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clars",
  "glob",
